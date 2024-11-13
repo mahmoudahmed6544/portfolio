@@ -146,20 +146,24 @@ export default function About(
                         marginBottom="32">
                         {about.calendar.display && (
                             <Button
+                            className={styles.blockAlign}
+                            style={{
+                                backdropFilter: 'blur(var(--static-space-1))',
+                                border: '1px solid var(--brand-alpha-medium)',
+                                width: 'full-width',
+                                marginBottom: 'var(--static-space-12)'
+                                
+                            }}
+                            
                             data-border="rounded"
-                            href={`/${locale}/about`}
-                            variant="tertiary"
                             suffixIcon="chevronRight"
-                            size="m">
+                            href={about.calendar.link}
+                            variant="tertiary"
+                            size="m"
+                            alpha="brand-weak"
+                            radius="full"
+                            >
                             <Flex
-                                className={styles.blockAlign}
-                                style={{
-                                    backdropFilter: 'blur(var(--static-space-1))',
-                                    border: '1px solid var(--brand-alpha-medium)',
-                                    width: 'full-width'
-                                }}
-                                alpha="brand-weak" radius="full"
-                                fillWidth padding="4" gap="8" marginBottom="m"
                                 alignItems="center">
                                 <Flex paddingLeft="12">
                                     <Icon

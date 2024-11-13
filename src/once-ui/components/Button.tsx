@@ -18,6 +18,9 @@ interface CommonProps {
     href?: string;
     className?: string;
     style?: React.CSSProperties;
+    alpha?: string; // For example: 'brand-weak' or other theme colors
+    radius?: 'full' | 'rounded' | 'square'; // Define options based on your design
+
 }
 
 export type ButtonProps = CommonProps & React.ButtonHTMLAttributes<HTMLButtonElement>;
