@@ -145,12 +145,18 @@ export default function About(
                         direction="column" justifyContent="center"
                         marginBottom="32">
                         {about.calendar.display && (
+                            <Button
+                            data-border="rounded"
+                            href={`/${locale}/about`}
+                            variant="tertiary"
+                            suffixIcon="chevronRight"
+                            size="m">
                             <Flex
                                 className={styles.blockAlign}
                                 style={{
                                     backdropFilter: 'blur(var(--static-space-1))',
                                     border: '1px solid var(--brand-alpha-medium)',
-                                    width: 'fit-content'
+                                    width: 'full-width'
                                 }}
                                 alpha="brand-weak" radius="full"
                                 fillWidth padding="4" gap="8" marginBottom="m"
@@ -164,12 +170,8 @@ export default function About(
                                     paddingX="8">
                                     Schedule a call
                                 </Flex>
-                                <IconButton
-                                    href={about.calendar.link}
-                                    data-border="rounded"
-                                    variant="tertiary"
-                                    icon="chevronRight"/>
                             </Flex>
+                            </Button>
                         )}
                         <Heading
                             className={styles.textAlign}
