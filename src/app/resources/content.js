@@ -2,7 +2,7 @@ import { InlineCode } from "@/once-ui/components";
 
 const person = {
     firstName: 'Mahmoud',
-    lastName:  'Abualsaud',
+    lastName:  'Abulsaud',
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
@@ -47,8 +47,8 @@ const home = {
     label: 'Home',
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>Design engineer and builder</>,
-    subline: <>I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive<br/> user experiences. After hours, I build my own projects.</>
+    headline: <>Graphic Designer</>,
+    subline: <>This is <InlineCode>Mahmoud</InlineCode>, a skilled <InlineCode>Graphic Designer</InlineCode> specializing in <br/> social media designs, branding, motion graphics, and printed materials.</>
 }
 
 const about = {
@@ -64,7 +64,7 @@ const about = {
     },
     calendar: {
         display: true,
-        link: 'https://cal.com'
+        link: 'https://cal.com/mahmoudabulsaud'
     },
     intro: {
         display: true,
@@ -173,7 +173,7 @@ const work = {
 }
 
 const gallery = {
-    label: 'Gallery',
+    label: 'Inspiration',
     title: 'My photo gallery',
     description: `A photo collection by ${person.name}`,
     // Images from https://pexels.com
