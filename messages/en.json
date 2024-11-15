@@ -16,7 +16,7 @@
     },
     "about": {
         "label": "About",
-        "title": "About me",
+        "title": "My Story",
         "description": "Meet {name}, {role} from {location}",
         "intro": {
             "title": "Introduction",
@@ -70,9 +70,9 @@
         "title": "My projects",
         "description": "Design and dev projects by {name}"
     },
-    "gallery": {
-        "label": "Gallery",
-        "title": "My photo gallery",
+    "inspiration": {
+        "label": "Inspiration",
+        "title": "Inspiration",
         "description": "A photo collection by {name}"
     },
     "projectCard": {

@@ -1,5 +1,5 @@
 import { Flex } from "@/once-ui/components";
-import MasonryGrid from "@/components/gallery/MasonryGrid";
+import MasonryGrid from "@/components/inspiration/MasonryGrid";
 import { baseURL, renderContent } from "@/app/resources";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
@@ -9,10 +9,10 @@ export async function generateMetadata(
 ) {
 
 	const t = await getTranslations();
-	const { gallery } = renderContent(t);
+	const { inspiration } = renderContent(t);
 
-	const title = gallery.title;
-	const description = gallery.description;
+	const title = inspiration.title;
+	const description = inspiration.description;
 	const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
 	return {
@@ -22,7 +22,7 @@ export async function generateMetadata(
 			title,
 			description,
 			type: 'website',
-			url: `https://${baseURL}/${locale}/gallery`,
+			url: `https://${baseURL}/${locale}/inspiration`,
 			images: [
 				{
 					url: ogImage,
@@ -39,12 +39,12 @@ export async function generateMetadata(
 	};
 }
 
-export default function Gallery(
+export default function inspiration(
 	{ params: {locale}}: { params: { locale: string }}
 ) {
 	unstable_setRequestLocale(locale);
 	const t = useTranslations();
-	const { gallery, person } = renderContent(t);
+	const { inspiration, person } = renderContent(t);
     return (
         <Flex fillWidth>
             <script
@@ -53,11 +53,11 @@ export default function Gallery(
 				dangerouslySetInnerHTML={{
 					__html: JSON.stringify({
 						'@context': 'https://schema.org',
-						'@type': 'ImageGallery',
-						name: gallery.title,
-						description: gallery.description,
-						url: `https://${baseURL}/gallery`,
-						image: gallery.images.map((image) => ({
+						'@type': 'Imageinspiration',
+						name: inspiration.title,
+						description: inspiration.description,
+						url: `https://${baseURL}/inspiration`,
+						image: inspiration.images.map((image) => ({
                             '@type': 'ImageObject',
                             url: `${baseURL}${image.src}`,
                             description: image.alt,

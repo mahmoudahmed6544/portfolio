@@ -14,7 +14,7 @@
         "headline": "Insinyur desain dan pembangun",
         "subline": "Saya Selene, seorang insinyur desain di FLY, di mana saya membuat pengalaman pengguna yang intuitif. Setelah jam kerja, saya mengerjakan proyek-proyek pribadi."
     },
-    "about": {
+    "mystory": {
         "label": "Tentang",
         "title": "Tentang Saya",
         "description": "Kenali {name}, {role} dari {location}",
@@ -70,7 +70,7 @@
         "title": "Proyek Saya",
         "description": "Proyek desain dan pengembangan oleh {name}"
     },
-    "gallery": {
+    "inspiration": {
         "label": "Galeri",
         "title": "Galeri Foto Saya",
         "description": "Koleksi foto oleh {name}"

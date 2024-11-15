@@ -1,7 +1,7 @@
 import { Avatar, Button, Flex, Heading, Icon, IconButton, SmartImage, Tag, Text } from '@/once-ui/components';
 import { baseURL, renderContent } from '@/app/resources';
-import TableOfContents from '@/components/about/TableOfContents';
-import styles from '@/components/about/about.module.scss'
+import TableOfContents from '@/components/mystory/TableOfContents';
+import styles from '@/components/mystory/mystory.module.scss'
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 
@@ -9,9 +9,9 @@ export async function generateMetadata(
     {params: {locale}}: { params: { locale: string }}
 ) {
     const t = await getTranslations();
-    const {person, about, social } = renderContent(t);
-	const title = about.title;
-	const description = about.description;
+    const {person, mystory, social } = renderContent(t);
+	const title = mystory.title;
+	const description = mystory.description;
 	const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
 	return {
@@ -38,32 +38,32 @@ export async function generateMetadata(
 	};
 }
 
-export default function About(
+export default function mystory(
     { params: {locale}}: { params: { locale: string }}
 ) {
     unstable_setRequestLocale(locale);
     const t = useTranslations();
-    const {person, about, social } = renderContent(t);
+    const {person, mystory, social } = renderContent(t);
     const structure = [
         { 
-            title: about.intro.title,
-            display: about.intro.display,
+            title: mystory.intro.title,
+            display: mystory.intro.display,
             items: []
         },
         { 
-            title: about.work.title,
-            display: about.work.display,
-            items: about.work.experiences.map(experience => experience.company)
+            title: mystory.work.title,
+            display: mystory.work.display,
+            items: mystory.work.experiences.map(experience => experience.company)
         },
         { 
-            title: about.studies.title,
-            display: about.studies.display,
-            items: about.studies.institutions.map(institution => institution.name)
+            title: mystory.studies.title,
+            display: mystory.studies.display,
+            items: mystory.studies.institutions.map(institution => institution.name)
         },
         { 
-            title: about.technical.title,
-            display: about.technical.display,
-            items: about.technical.skills.map(skill => skill.title)
+            title: mystory.technical.title,
+            display: mystory.technical.display,
+            items: mystory.technical.skills.map(skill => skill.title)
         },
     ]
     return (
@@ -79,20 +79,20 @@ export default function About(
                         '@type': 'Person',
                         name: person.name,
                         jobTitle: person.role,
-                        description: about.intro.description,
-                        url: `https://${baseURL}/about`,
+                        description: mystory.intro.description,
+                        url: `https://${baseURL}/mystory`,
                         image: `${baseURL}/images/${person.avatar}`,
                         sameAs: social
                             .filter((item) => item.link && !item.link.startsWith('mailto:')) // Filter out empty links and email links
                             .map((item) => item.link),
                         worksFor: {
                             '@type': 'Organization',
-                            name: about.work.experiences[0].company || ''
+                            name: mystory.work.experiences[0].company || ''
                         },
                     }),
                 }}
             />
-            { about.tableOfContent.display && (
+            { mystory.tableOfContent.display && (
                 <Flex
                     style={{ left: '0', top: '50%', transform: 'translateY(-50%)' }}
                     position="fixed"
@@ -100,13 +100,13 @@ export default function About(
                     direction="column" hide="s">
                     <TableOfContents
                         structure={structure}
-                        about={about} />
+                        mystory={mystory} />
                 </Flex>
             )}
             <Flex
                 fillWidth
                 mobileDirection="column" justifyContent="center">
-                { about.avatar.display && (
+                { mystory.avatar.display && (
                     <Flex
                         minWidth="160" paddingX="l" paddingBottom="xl" gap="m"
                         flex={3} direction="column" alignItems="center">
@@ -140,11 +140,11 @@ export default function About(
                     className={styles.blockAlign}
                     fillWidth flex={9} maxWidth={40} direction="column">
                     <Flex
-                        id={about.intro.title}
+                        id={mystory.intro.title}
                         fillWidth minHeight="160"
                         direction="column" justifyContent="center"
                         marginBottom="32">
-                        {about.calendar.display && (
+                        {mystory.calendar.display && (
                             <Button
                             className={styles.blockAlign}
                             style={{
@@ -157,7 +157,7 @@ export default function About(
                             
                             data-border="rounded"
                             suffixIcon="chevronRight"
-                            href={about.calendar.link}
+                            href={mystory.calendar.link}
                             variant="tertiary"
                             size="m"
                             alpha="brand-weak"
@@ -207,28 +207,28 @@ export default function About(
                         )}
                     </Flex>
 
-                    { about.intro.display && (
+                    { mystory.intro.display && (
                         <Flex
                             direction="column"
                             textVariant="body-default-l"
                             fillWidth gap="m" marginBottom="xl">
-                            {about.intro.description}
+                            {mystory.intro.description}
                         </Flex>
                     )}
 
-                    { about.work.display && (
+                    { mystory.work.display && (
                         <>
                             <Heading
                                 as="h2"
-                                id={about.work.title}
+                                id={mystory.work.title}
                                 variant="display-strong-s"
                                 marginBottom="m">
-                                {about.work.title}
+                                {mystory.work.title}
                             </Heading>
                             <Flex
                                 direction="column"
                                 fillWidth gap="l" marginBottom="40">
-                                {about.work.experiences.map((experience, index) => (
+                                {mystory.work.experiences.map((experience, index) => (
                                     <Flex
                                         key={`${experience.company}-${experience.role}-${index}`}
                                         fillWidth
@@ -294,19 +294,19 @@ export default function About(
                         </>
                     )}
 
-                    { about.studies.display && (
+                    { mystory.studies.display && (
                         <>
                             <Heading
                                 as="h2"
-                                id={about.studies.title}
+                                id={mystory.studies.title}
                                 variant="display-strong-s"
                                 marginBottom="m">
-                                {about.studies.title}
+                                {mystory.studies.title}
                             </Heading>
                             <Flex
                                 direction="column"
                                 fillWidth gap="l" marginBottom="40">
-                                {about.studies.institutions.map((institution, index) => (
+                                {mystory.studies.institutions.map((institution, index) => (
                                     <Flex
                                         key={`${institution.name}-${index}`}
                                         fillWidth gap="4"
@@ -327,18 +327,18 @@ export default function About(
                         </>
                     )}
 
-                    { about.technical.display && (
+                    { mystory.technical.display && (
                         <>
                             <Heading
                                 as="h2"
-                                id={about.technical.title}
+                                id={mystory.technical.title}
                                 variant="display-strong-s" marginBottom="40">
-                                {about.technical.title}
+                                {mystory.technical.title}
                             </Heading>
                             <Flex
                                 direction="column"
                                 fillWidth gap="l">
-                                {about.technical.skills.map((skill, index) => (
+                                {mystory.technical.skills.map((skill, index) => (
                                     <Flex
                                         key={`${skill}-${index}`}
                                         fillWidth gap="4"

@@ -52,10 +52,10 @@ const createI18nContent = (t) => {
         subline: <>{t("home.subline")}</>
     }
 
-    const about = {
-        label: t("about.label"),
-        title: t("about.label"),
-        description: t("about.description", {name: person.name, role: person.role, location: person.location}),
+    const mystoru = {
+        label: t("mystory.label"),
+        title: t("mystory.label"),
+        description: t("mystory.description", {name: person.name, role: person.role, location: person.location}),
         tableOfContent: {
             display: true,
             subItems: true
@@ -69,18 +69,18 @@ const createI18nContent = (t) => {
         },
         intro: {
             display: true,
-            title: t("about.intro.title"),
-            description: <>{t("about.intro.description")}</>
+            title: t("mystory.intro.title"),
+            description: <>{t("mystory.intro.description")}</>
         },
         work: {
             display: true, // set to false to hide this section
-            title: t("about.work.title"),
+            title: t("mystory.work.title"),
             experiences: [
                 {
                     company: 'FLY',
-                    timeframe: t("about.work.experiences.FLY.timeframe"),
-                    role: t("about.work.experiences.FLY.role"),
-                    achievements: t("about.work.experiences.FLY.achievements").split(";"),
+                    timeframe: t("mystory.work.experiences.FLY.timeframe"),
+                    role: t("mystory.work.experiences.FLY.role"),
+                    achievements: t("mystory.work.experiences.FLY.achievements").split(";"),
                     images: [ // optional: leave the array empty if you don't want to display images
                         {
                             src: '/images/projects/project-01/cover-01.jpg',
@@ -92,9 +92,9 @@ const createI18nContent = (t) => {
                 },
                 {
                     company: 'Creativ3',
-                    timeframe: t("about.work.experiences.Creativ3.timeframe"),
-                    role: t("about.work.experiences.Creativ3.role"),
-                    achievements: t("about.work.experiences.Creativ3.achievements").split(";"),
+                    timeframe: t("mystory.work.experiences.Creativ3.timeframe"),
+                    role: t("mystory.work.experiences.Creativ3.role"),
+                    achievements: t("mystory.work.experiences.Creativ3.achievements").split(";"),
                     images: [ ]
                 }
             ]
@@ -105,21 +105,21 @@ const createI18nContent = (t) => {
             institutions: [
                 {
                     name: 'University of Jakarta',
-                    description: <>{t(`about.studies.institutions.University of Jakarta.description`)}</>,
+                    description: <>{t(`mystory.studies.institutions.University of Jakarta.description`)}</>,
                 },
                 {
                     name: 'Build the Future',
-                    description: <>{t("about.studies.institutions.Build the Future.description")}</>,
+                    description: <>{t("mystory.studies.institutions.Build the Future.description")}</>,
                 }
             ]
         },
         technical: {
             display: true, // set to false to hide this section
-            title: t("about.technical.title"),
+            title: t("mystory.technical.title"),
             skills: [
                 {
                     title: 'Figma',
-                    description: <>{t("about.technical.skills.Figma.description")}</>,
+                    description: <>{t("mystory.technical.skills.Figma.description")}</>,
                     images: [
                         {
                             src: '/images/projects/project-01/cover-02.jpg',
@@ -137,7 +137,7 @@ const createI18nContent = (t) => {
                 },
                 {
                     title: 'Next.js',
-                    description: <>{t("about.technical.skills.Nextjs.description")}</>, // "." not accepted in next-intl namespace
+                    description: <>{t("mystory.technical.skills.Nextjs.description")}</>, // "." not accepted in next-intl namespace
                     images: [
                         {
                             src: '/images/projects/project-01/cover-04.jpg',
@@ -167,79 +167,79 @@ const createI18nContent = (t) => {
         // All projects will be listed on the /home and /work routes
     }
 
-    const gallery = {
-        label: t("gallery.label"),
-        title: t("gallery.title"),
-        description: t("gallery.description", {name: person.name}),
+    const inspiration = {
+        label: t("inspiration.label"),
+        title: t("inspiration.title"),
+        description: t("inspiration.description", {name: person.name}),
         // Images from https://pexels.com
         images: [
             {
-                src: '/images/gallery/img-01.jpg',
+                src: '/images/inspiration/img-01.jpg',
                 alt: 'image',
                 orientation: 'vertical'
             },
             {
-                src: '/images/gallery/img-02.jpg',
+                src: '/images/inspiration/img-02.jpg',
                 alt: 'image',
                 orientation: 'horizontal'
             },
             { 
-                src: '/images/gallery/img-03.jpg',
+                src: '/images/inspiration/img-03.jpg',
                 alt: 'image',
                 orientation: 'vertical'
             },
             { 
-                src: '/images/gallery/img-04.jpg',
+                src: '/images/inspiration/img-04.jpg',
                 alt: 'image',
                 orientation: 'horizontal'
             },
             {
-                src: '/images/gallery/img-05.jpg',
+                src: '/images/inspiration/img-05.jpg',
                 alt: 'image',
                 orientation: 'horizontal'
             },
             {
-                src: '/images/gallery/img-06.jpg',
+                src: '/images/inspiration/img-06.jpg',
                 alt: 'image',
                 orientation: 'vertical'
             },
             {
-                src: '/images/gallery/img-07.jpg',
+                src: '/images/inspiration/img-07.jpg',
                 alt: 'image',
                 orientation: 'horizontal'
             },
             {
-                src: '/images/gallery/img-08.jpg',
+                src: '/images/inspiration/img-08.jpg',
                 alt: 'image',
                 orientation: 'vertical'
             },
             {
-                src: '/images/gallery/img-09.jpg',
+                src: '/images/inspiration/img-09.jpg',
                 alt: 'image',
                 orientation: 'horizontal'
             },
             {
-                src: '/images/gallery/img-10.jpg',
+                src: '/images/inspiration/img-10.jpg',
                 alt: 'image',
                 orientation: 'horizontal'
             },
             { 
-                src: '/images/gallery/img-11.jpg',
+                src: '/images/inspiration/img-11.jpg',
                 alt: 'image',
                 orientation: 'vertical'
             },
             {
-                src: '/images/gallery/img-12.jpg',
+                src: '/images/inspiration/img-12.jpg',
                 alt: 'image',
                 orientation: 'horizontal'
             },
             {
-                src: '/images/gallery/img-13.jpg',
+                src: '/images/inspiration/img-13.jpg',
                 alt: 'image',
                 orientation: 'horizontal'
             },
             { 
-                src: '/images/gallery/img-14.jpg',
+                src: '/images/inspiration/img-14.jpg',
                 alt: 'image',
                 orientation: 'horizontal'
             },
@@ -250,10 +250,10 @@ const createI18nContent = (t) => {
         social,
         newsletter,
         home,
-        about,
+        mystory,
         blog,
         work,
-        gallery
+        inspiration
     }
 };
 

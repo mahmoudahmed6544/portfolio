@@ -68,7 +68,7 @@ export const Header = () => {
     }
 
     const t = useTranslations();
-    const { person, home, about, blog, work, gallery } = renderContent(t);
+    const { person, home, mystory, blog, work, inspiration } = renderContent(t);
 
     return (
         <Flex style={{height: 'fit-content'}}
@@ -103,12 +103,12 @@ export const Header = () => {
                                 <Flex paddingX="2" hide="s">{home.label}</Flex>
                             </ToggleButton>
                         )}
-                        { routes['/about'] && (
+                        { routes['/mystory'] && (
                             <ToggleButton
                                 prefixIcon="person"
-                                href={`/${params?.locale}/about`}
-                                selected={pathname === "/about"}>
-                                <Flex paddingX="2" hide="s">{about.label}</Flex>
+                                href={`/${params?.locale}/mystory`}
+                                selected={pathname === "/mystory"}>
+                                <Flex paddingX="2" hide="s">{mystory.label}</Flex>
                             </ToggleButton>
                         )}
                         { routes['/work'] && (
@@ -127,12 +127,12 @@ export const Header = () => {
                                 <Flex paddingX="2" hide="s">{blog.label}</Flex>
                             </ToggleButton>
                         )}
-                        { routes['/gallery'] && (
+                        { routes['/inspiration'] && (
                             <ToggleButton
-                                prefixIcon="gallery"
-                                href={`/${params?.locale}/gallery`}
+                                prefixIcon="inspiration"
+                                href={`/${params?.locale}/inspiration`}
                                 selected={pathname.startsWith('/gallery')}>
-                                <Flex paddingX="2" hide="s">{gallery.label}</Flex>
+                                <Flex paddingX="2" hide="s">{inspiration.label}</Flex>
                             </ToggleButton>
                         )}
                     </Flex>

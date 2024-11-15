@@ -47,7 +47,7 @@ export default function Home(
 ) {
 	unstable_setRequestLocale(locale);
 	const t = useTranslations();
-	const { home, about, person, newsletter } = renderContent(t);
+	const { home, mystory, person, newsletter } = renderContent(t);
 	return (
 		<Flex
 			maxWidth="m" fillWidth gap="xl"
@@ -99,20 +99,20 @@ export default function Home(
 						<RevealFx translateY="12" delay={0.4}>
 							<Button
 								data-border="rounded"
-								href={`/${locale}/about`}
+								href={`/${locale}/mystory`}
 								variant="tertiary"
 								suffixIcon="chevronRight"
 								size="m">
 								<Flex
 									gap="8"
 									alignItems="center">
-									{about.avatar.display && (
+									{mystory.avatar.display && (
 										<Avatar
 											style={{marginLeft: '-0.75rem', marginRight: '0.25rem'}}
 											src={person.avatar}
 											size="m"/>
 										)}
-										{t("about.title")}
+										{t("My Story")}
 								</Flex>
 							</Button>
 						</RevealFx>

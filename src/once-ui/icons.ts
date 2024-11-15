@@ -29,6 +29,7 @@ import {
 } from "react-icons/pi";
 
 import {
+	FaBehance,
 	FaDiscord,
 	FaGithub,
 	FaLinkedin,
@@ -57,9 +58,10 @@ export const iconLibrary: Record<string, IconType> = {
 	openLink: HiOutlineLink,
 	calendar: HiCalendarDays,
 	home: PiHouseDuotone,
-	gallery: PiImageDuotone,
+	inspiration: PiImageDuotone,
 	discord: FaDiscord,
 	github: FaGithub,
 	linkedin: FaLinkedin,
 	x: FaXTwitter,
+	Behance: FaBehance,
 };

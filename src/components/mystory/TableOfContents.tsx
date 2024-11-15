@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Flex, Text } from '@/once-ui/components';
-import styles from './about.module.scss';
+import styles from './mystory.module.scss';
 
 interface TableOfContentsProps {
     structure: {
@@ -10,7 +10,7 @@ interface TableOfContentsProps {
         display: boolean;
         items: string[];
     }[];
-    about: {
+    mystory: {
         tableOfContent: {
             display: boolean;
             subItems: boolean;
@@ -18,7 +18,7 @@ interface TableOfContentsProps {
     };
 }
 
-const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) => {
+const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, mystory }) => {
     const scrollTo = (id: string, offset: number) => {
         const element = document.getElementById(id);
         if (element) {
@@ -32,7 +32,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
         }
     };
 
-    if (!about.tableOfContent.display) return null;
+    if (!mystory.tableOfContent.display) return null;
 
     return (
         <Flex
@@ -63,7 +63,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
                             {section.title}
                         </Text>
                     </Flex>
-                    {about.tableOfContent.subItems && (
+                    {mystory.tableOfContent.subItems && (
                         <>
                             {section.items.map((item, itemIndex) => (
                                 <Flex

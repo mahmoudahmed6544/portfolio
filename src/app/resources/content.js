@@ -2,7 +2,7 @@ import { InlineCode } from "@/once-ui/components";
 
 const person = {
     firstName: 'Mahmoud',
-    lastName:  'Abulsaud',
+    lastName:  'Abualsoud',
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
@@ -14,7 +14,7 @@ const person = {
 
 const newsletter = {
     display: true,
-    title: <>Subscribe to {person.firstName}'s Newsletter</>,
+    title: <>Subscribe to MeeM's Newsletter</>,
     description: <>I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering.</>
 }
 
@@ -22,14 +22,14 @@ const social = [
     // Links are automatically displayed.
     // Import new icons in /once-ui/icons.ts
     {
-        name: 'GitHub',
-        icon: 'github',
-        link: 'https://github.com/once-ui-system/nextjs-starter',
+        name: 'Behance',
+        icon: 'Behance',
+        link: 'https://www.behance.net/macdone',
     },
     {
         name: 'LinkedIn',
         icon: 'linkedin',
-        link: 'https://www.linkedin.com/company/once-ui/',
+        link: 'www.linkedin.com/in/mahmoudabualsaud',
     },
     {
         name: 'X',
@@ -39,21 +39,21 @@ const social = [
     {
         name: 'Email',
         icon: 'email',
-        link: 'mailto:example@gmail.com',
+        link: 'mahmoudabualsoudwork@gmail.com',
     },
 ]
 
 const home = {
     label: 'Home',
-    title: `${person.name}'s Portfolio`,
+    title: `MeeM`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
     headline: <>Graphic Designer</>,
-    subline: <>This is <InlineCode>Mahmoud</InlineCode>, a skilled Graphic Designer specializing in social media designs, branding, motion graphics, and printed materials.</>
+    subline: <>This is <InlineCode>Mahmoud Abualsoud</InlineCode>, a skilled Graphic Designer specializing in social media designs, branding, motion graphics, and printed materials.</>
 }
 
-const about = {
-    label: 'About',
-    title: 'About me',
+const mystory = {
+    label: 'My Story',
+    title: 'MeeM | My Story',
     description: `Meet ${person.name}, ${person.role} from ${person.location}`,
     tableOfContent: {
         display: true,
@@ -172,83 +172,83 @@ const work = {
     // All projects will be listed on the /home and /work routes
 }
 
-const gallery = {
+const inspiration = {
     label: 'Inspiration',
-    title: 'My photo gallery',
+    title: 'My photo inspiration',
     description: `A photo collection by ${person.name}`,
     // Images from https://pexels.com
     images: [
         { 
-            src: '/images/gallery/img-01.jpg', 
+            src: '/images/inspiration/img-01.jpg', 
             alt: 'image',
             orientation: 'vertical'
         },
         { 
-            src: '/images/gallery/img-02.jpg', 
+            src: '/images/inspiration/img-02.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-03.jpg', 
+            src: '/images/inspiration/img-03.jpg', 
             alt: 'image',
             orientation: 'vertical'
         },
         { 
-            src: '/images/gallery/img-04.jpg', 
+            src: '/images/inspiration/img-04.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-05.jpg', 
+            src: '/images/inspiration/img-05.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-06.jpg', 
+            src: '/images/inspiration/img-06.jpg', 
             alt: 'image',
             orientation: 'vertical'
         },
         { 
-            src: '/images/gallery/img-07.jpg', 
+            src: '/images/inspiration/img-07.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-08.jpg', 
+            src: '/images/inspiration/img-08.jpg', 
             alt: 'image',
             orientation: 'vertical'
         },
         { 
-            src: '/images/gallery/img-09.jpg', 
+            src: '/images/inspiration/img-09.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-10.jpg', 
+            src: '/images/inspiration/img-10.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-11.jpg', 
+            src: '/images/inspiration/img-11.jpg', 
             alt: 'image',
             orientation: 'vertical'
         },
         { 
-            src: '/images/gallery/img-12.jpg', 
+            src: '/images/inspiration/img-12.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-13.jpg', 
+            src: '/images/inspiration/img-13.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-14.jpg', 
+            src: '/images/inspiration/img-14.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
     ]
 }
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, mystory, blog, work, inspiration };
