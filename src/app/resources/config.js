@@ -12,7 +12,7 @@ const i18nOptions = {
 const routes = {
     '/':        true,
     '/mystory':   true,
-    '/work':    true,
+    '/myprojects':    true,
     '/blog':    true,
     '/inspiration': true,
 }
@@ -20,7 +20,7 @@ const routes = {
 // Enable password protection on selected routes
 // Set password in pages/api/authenticate.ts
 const protectedRoutes = {
-    '/work/automate-design-handovers-with-a-figma-to-code-pipeline': true
+    '/myprojects/automate-design-handovers-with-a-figma-to-code-pipeline': true
 }
 
 const effects = {

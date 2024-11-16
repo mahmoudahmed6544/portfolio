@@ -52,7 +52,7 @@ const createI18nContent = (t) => {
         subline: <>{t("home.subline")}</>
     }
 
-    const mystoru = {
+    const mystory = {
         label: t("mystory.label"),
         title: t("mystory.label"),
         description: t("mystory.description", {name: person.name, role: person.role, location: person.location}),
@@ -159,12 +159,12 @@ const createI18nContent = (t) => {
         // All posts will be listed on the /blog route
     }
 
-    const work = {
-        label: t("work.label"),
-        title: t("work.title"),
-        description: t("work.description", {name: person.name})
+    const myprojects = {
+        label: t("myprojects.label"),
+        title: t("myprojects.title"),
+        description: t("myprojects.description", {name: person.name})
         // Create new project pages by adding a new .mdx file to app/blog/posts
-        // All projects will be listed on the /home and /work routes
+        // All projects will be listed on the /home and /myprojects routes
     }
 
     const inspiration = {
@@ -252,7 +252,7 @@ const createI18nContent = (t) => {
         home,
         mystory,
         blog,
-        work,
+        myprojects,
         inspiration
     }
 };

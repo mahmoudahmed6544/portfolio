@@ -65,9 +65,9 @@
         "title": "Writing about design and tech...",
         "description": "Read what {name} has been up to recently"
     },
-    "work": {
-        "label": "Work",
-        "title": "My projects",
+    "myprojects": {
+        "label": "My Projects",
+        "title": "My Projects",
         "description": "Design and dev projects by {name}"
     },
     "inspiration": {

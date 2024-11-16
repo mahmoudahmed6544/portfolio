@@ -158,23 +158,23 @@ const mystory = {
 
 const blog = {
     label: 'Blog',
-    title: 'Writing about design and tech...',
+    title: 'MeeM | Blog',
     description: `Read what ${person.name} has been up to recently`
     // Create new blog posts by adding a new .mdx file to app/blog/posts
     // All posts will be listed on the /blog route
 }
 
-const work = {
-    label: 'Work',
-    title: 'My projects',
+const myprojects = {
+    label: 'My Projects',
+    title: 'MeeM | My Projects',
     description: `Design and dev projects by ${person.name}`
     // Create new project pages by adding a new .mdx file to app/blog/posts
-    // All projects will be listed on the /home and /work routes
+    // All projects will be listed on the /home and /myprojects routes
 }
 
 const inspiration = {
     label: 'Inspiration',
-    title: 'My photo inspiration',
+    title: 'MeeM | Inspiration',
     description: `A photo collection by ${person.name}`,
     // Images from https://pexels.com
     images: [
@@ -251,4 +251,4 @@ const inspiration = {
     ]
 }
 
-export { person, social, newsletter, home, mystory, blog, work, inspiration };
+export { person, social, newsletter, home, mystory, blog, myprojects, inspiration };

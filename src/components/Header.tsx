@@ -68,7 +68,7 @@ export const Header = () => {
     }
 
     const t = useTranslations();
-    const { person, home, mystory, blog, work, inspiration } = renderContent(t);
+    const { person, home, mystory, blog, myprojects, inspiration } = renderContent(t);
 
     return (
         <Flex style={{height: 'fit-content'}}
@@ -111,12 +111,12 @@ export const Header = () => {
                                 <Flex paddingX="2" hide="s">{mystory.label}</Flex>
                             </ToggleButton>
                         )}
-                        { routes['/work'] && (
+                        { routes['/myprojects'] && (
                             <ToggleButton
                                 prefixIcon="grid"
-                                href={`/${params?.locale}/work`}
-                                selected={pathname.startsWith('/work')}>
-                                <Flex paddingX="2" hide="s">{work.label}</Flex>
+                                href={`/${params?.locale}/myprojects`}
+                                selected={pathname.startsWith('/myprojects')}>
+                                <Flex paddingX="2" hide="s">{myprojects.label}</Flex>
                             </ToggleButton>
                         )}
                         { routes['/blog'] && (
