@@ -77,7 +77,7 @@ export function generateMetadata({ params: { slug, locale } }: myprojectsParams)
 	}
 }
 
-export default function Project({ params }: WorkParams) {
+export default function Project({ params }: myprojectsParams) {
 	unstable_setRequestLocale(params.locale);
 	let post = getPosts(['src', 'app', '[locale]', 'myprojects', 'projects', params.locale]).find((post) => post.slug === params.slug)
 
