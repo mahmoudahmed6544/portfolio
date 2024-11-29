@@ -1,0 +1,9 @@
+.footer {
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding-bottom: calc(var(--static-space-24) * 2 + var(--static-space-16) + 10px) !important;
+    }
+}
