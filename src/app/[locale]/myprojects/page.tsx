@@ -2,6 +2,7 @@ import { getPosts } from '@/app/utils';
 import { Flex, Heading } from '@/once-ui/components';
 import { FeaturedProjects } from '@/components/myprojects/FeaturedProjects';
 import { CategoryGrid } from '@/components/myprojects/CategoryGrid';
+import { DownloadPortfolio } from "@/components/myprojects/DownloadPortfolio";
 import { baseURL, renderContent } from '@/app/resources';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
@@ -76,6 +77,7 @@ export default function myprojects(
                 gap="s">
                 <FeaturedProjects locale={locale} />
                 <CategoryGrid />
+                <DownloadPortfolio />
             </Flex>
         </Flex>
     );
