@@ -1,6 +1,16 @@
 .position {
     position: sticky;
     top: 0;
+    width: 100%;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.scrolled {
+    background: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 6px -1px rgba(10, 25, 47, 0.2);
+    padding: calc(var(--static-space-8) + 5px) var(--static-space-16);
 }
 
 @media (--s) {
@@ -8,5 +18,10 @@
         top: auto;
         position: fixed;
         bottom: var(--static-space-24);
+    }
+    
+    .scrolled {
+        bottom: 0;
+        padding: calc(var(--static-space-8) + 5px) var(--static-space-12);
     }
 }

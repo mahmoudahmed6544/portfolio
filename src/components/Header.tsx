@@ -56,6 +56,17 @@ export const Header = () => {
     const [isPending, startTransition] = useTransition();
     const pathname = usePathname() ?? '';
     const params = useParams();
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            setIsScrolled(scrollPosition > 20);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     function handleLanguageChange(locale: string) {
         const nextLocale = locale as Locale;
@@ -72,7 +83,7 @@ export const Header = () => {
 
     return (
         <Flex style={{height: 'fit-content'}}
-            className={styles.position}
+            className={`${styles.position} ${isScrolled ? styles.scrolled : ''}`}
             as="header"
             zIndex={9}
             fillWidth padding="8"
