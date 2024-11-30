@@ -46,7 +46,7 @@ export function DownloadPortfolio() {
                 Grab My Full Portfolio!
             </Heading>
             <Button
-                variant="primary"
+                variant="secondary"
                 size="l"
                 className={styles.button}
                 onClick={handleDownload}>
