@@ -11,7 +11,7 @@ const featuredProjects = [
         id: 1,
         title: "Vezeeta Healthcare Campaign",
         category: "Social Media Designs",
-        image: "/projects/vezeeta-campaign.jpg",
+        image: "/images/projects/vezeeta-campaign.jpg",
         publishedAt: "2024-01-15",
         href: "/myprojects/vezeeta-campaign"
     },
@@ -19,7 +19,7 @@ const featuredProjects = [
         id: 2,
         title: "Brand Identity Redesign",
         category: "Branding",
-        image: "/projects/brand-identity.jpg",
+        image: "/images/projects/brand-identity.jpg",
         publishedAt: "2024-01-10",
         href: "/myprojects/brand-identity"
     },
@@ -27,7 +27,7 @@ const featuredProjects = [
         id: 3,
         title: "Product Launch Video",
         category: "Motion Videos",
-        image: "/projects/product-launch.jpg",
+        image: "/images/projects/product-launch.jpg",
         publishedAt: "2024-01-05",
         href: "/myprojects/product-launch"
     },
@@ -35,7 +35,7 @@ const featuredProjects = [
         id: 4,
         title: "Corporate Event Coverage",
         category: "Video Editing",
-        image: "/projects/corporate-event.jpg",
+        image: "/images/projects/corporate-event.jpg",
         publishedAt: "2024-01-01",
         href: "/myprojects/corporate-event"
     }

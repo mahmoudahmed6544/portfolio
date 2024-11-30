@@ -14,25 +14,25 @@ const categories: Category[] = [
     {
         id: 1,
         title: "Branding\nProjects",
-        image: "/projects/branding-category.jpg",
+        image: "/images/categories/branding-category.jpg",
         href: "/myprojects/category/branding"
     },
     {
         id: 2,
         title: "Social Media\nDesigns",
-        image: "/projects/social-media-category.jpg",
+        image: "/images/categories/social-media-category.jpg",
         href: "/myprojects/category/social-media"
     },
     {
         id: 3,
         title: "Motion &\nEditing Videos",
-        image: "/projects/motion-category.jpg",
+        image: "/images/categories/motion-category.jpg",
         href: "/myprojects/category/motion"
     },
     {
         id: 4,
         title: "3D\nDesigns",
-        image: "/projects/3d-category.jpg",
+        image: "/images/categories/3d-category.jpg",
         href: "/myprojects/category/3d-designs"
     }
 ];
