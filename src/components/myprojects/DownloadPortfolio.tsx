@@ -7,8 +7,7 @@ import styles from './DownloadPortfolio.module.scss';
 
 export function DownloadPortfolio() {
     const handleDownload = () => {
-        // TODO: Replace with actual portfolio PDF path
-        const pdfPath = '/portfolio.pdf';
+        const pdfPath = '/files/portfolio.pdf';
         const link = document.createElement('a');
         link.href = pdfPath;
         link.download = 'ahmed-portfolio.pdf';
