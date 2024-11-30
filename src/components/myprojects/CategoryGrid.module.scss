@@ -7,7 +7,7 @@
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 60px 40px;
     padding: 0 var(--responsive-space-m);
 }
@@ -43,9 +43,23 @@
     transition: border-color 0.3s ease;
     width: 100%;
     height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
     
     &:hover {
         border-color: var(--neutral-alpha-strong);
+    }
+}
+
+@media (max-width: 1440px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -58,10 +72,12 @@
     .grid {
         grid-template-columns: 1fr;
         gap: 40px;
+        padding: 0 var(--responsive-space-s);
     }
 
     .container {
         margin-top: var(--static-space-80);
         margin-bottom: var(--static-space-80);
+        gap: var(--responsive-space-l);
     }
 }
