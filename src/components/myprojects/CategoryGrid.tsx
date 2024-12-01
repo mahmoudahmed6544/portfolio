@@ -1,6 +1,7 @@
 "use client";
 
 import { Flex, Heading, SmartImage, SmartLink } from '@/once-ui/components';
+import Masonry from 'react-masonry-css';
 import styles from './CategoryGrid.module.scss';
 
 interface Category {
@@ -33,9 +34,15 @@ const categories: Category[] = [
         id: 4,
         title: "3D\nDesigns",
         image: "/images/categories/3d-category.jpg",
-        href: "/myprojects/category/3d-designs"
+        href: "/myprojects/category/3d"
     }
 ];
+
+const breakpointColumns = {
+    default: 2, // 2 columns by default
+    1024: 2,    // 2 columns on tablets
+    768: 1      // 1 column on mobile
+};
 
 export function CategoryGrid() {
     return (
@@ -45,14 +52,13 @@ export function CategoryGrid() {
             className={styles.container}>
             <Heading
                 variant="display-strong-m"
-                marginBottom="m"
                 className={styles.heading}>
                 Project Categories
             </Heading>
-            <Flex
-                fillWidth
-                wrap
-                className={styles.grid}>
+            <Masonry
+                breakpointCols={breakpointColumns}
+                className={styles.masonryGrid}
+                columnClassName={styles.masonryColumn}>
                 {categories.map((category) => (
                     <SmartLink
                         key={category.id}
@@ -64,7 +70,7 @@ export function CategoryGrid() {
                             <SmartImage
                                 src={category.image}
                                 alt={category.title}
-                                aspectRatio="9/7"
+                                aspectRatio="16/9"
                                 className={styles.image}
                             />
                             <Heading
@@ -75,7 +81,7 @@ export function CategoryGrid() {
                         </Flex>
                     </SmartLink>
                 ))}
-            </Flex>
+            </Masonry>
         </Flex>
     );
 }

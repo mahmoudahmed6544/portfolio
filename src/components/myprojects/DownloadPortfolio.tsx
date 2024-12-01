@@ -7,13 +7,15 @@ import styles from './DownloadPortfolio.module.scss';
 
 export function DownloadPortfolio() {
     const handleDownload = () => {
-        const pdfPath = '/files/portfolio.pdf';
-        const link = document.createElement('a');
-        link.href = pdfPath;
-        link.download = 'ahmed-portfolio.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        try {
+            // Create URL for the PDF
+            const pdfPath = '/files/portfolio.pdf';
+            
+            // Use window.open for direct download
+            window.open(pdfPath, '_blank');
+        } catch (error) {
+            console.error('Download failed:', error);
+        }
     };
 
     return (
