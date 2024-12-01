@@ -14,10 +14,11 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--responsive-space-m);
+    margin-left: -20px; /* Compensate for column padding */
 }
 
 .masonryColumn {
-    padding: 0 20px; /* Gutter size */
+    padding-left: 20px; /* Horizontal gap between columns */
     background-clip: padding-box;
 }
 
@@ -31,7 +32,7 @@
 .heading {
     padding: 0 var(--responsive-space-m);
     text-align: center;
-    margin-bottom: var(--responsive-space-l);
+    margin-bottom: var(--responsive-space-xl);
 }
 
 .title {
@@ -39,7 +40,7 @@
     line-height: 1.2;
     white-space: pre-line;
     width: 100%;
-    margin-top: var(--responsive-space-s);
+    margin-top: var(--responsive-space-m);
 }
 
 .link {
@@ -47,10 +48,14 @@
     transition: transform 0.3s ease;
     width: 100%;
     display: block;
-    margin-bottom: 40px; /* Space between cards */
+    margin-bottom: 60px; /* Increased vertical spacing between cards */
     
     &:hover {
         transform: scale(1.02);
+    }
+
+    &:last-child {
+        margin-bottom: 0; /* Remove margin from last card */
     }
 }
 
@@ -81,5 +86,9 @@
     .container {
         margin-top: var(--static-space-80);
         margin-bottom: var(--static-space-80);
+    }
+
+    .link {
+        margin-bottom: 40px; /* Slightly reduced spacing on mobile */
     }
 }
