@@ -39,9 +39,22 @@ const categories: Category[] = [
 ];
 
 const breakpointColumns = {
-    default: 2, // 2 columns by default
-    1024: 2,    // 2 columns on tablets
-    768: 1      // 1 column on mobile
+    default: 2,
+    1024: 2,
+    768: 1
+};
+
+// Custom styles for masonry-grid
+const masonryStyles = {
+    display: 'flex',
+    marginLeft: '-40px', /* Compensate for gutter size */
+    width: 'auto'
+};
+
+// Custom styles for masonry-grid_column
+const columnStyles = {
+    paddingLeft: '40px', /* Gutter size */
+    backgroundClip: 'padding-box'
 };
 
 export function CategoryGrid() {
@@ -55,33 +68,37 @@ export function CategoryGrid() {
                 className={styles.heading}>
                 Project Categories
             </Heading>
-            <Masonry
-                breakpointCols={breakpointColumns}
-                className={styles.masonryGrid}
-                columnClassName={styles.masonryColumn}>
-                {categories.map((category) => (
-                    <SmartLink
-                        key={category.id}
-                        href={category.href}
-                        className={styles.link}>
-                        <Flex
-                            direction="column"
-                            className={styles.categoryCard}>
-                            <SmartImage
-                                src={category.image}
-                                alt={category.title}
-                                aspectRatio="16/9"
-                                className={styles.image}
-                            />
-                            <Heading
-                                variant="display-strong-xs"
-                                className={styles.title}>
-                                {category.title}
-                            </Heading>
-                        </Flex>
-                    </SmartLink>
-                ))}
-            </Masonry>
+            <div style={{ padding: '0 var(--responsive-space-m)' }}>
+                <Masonry
+                    breakpointCols={breakpointColumns}
+                    className={styles.masonryGrid}
+                    columnClassName={styles.masonryColumn}
+                    style={masonryStyles}>
+                    {categories.map((category) => (
+                        <div key={category.id} style={{ marginBottom: '80px' }}>
+                            <SmartLink
+                                href={category.href}
+                                className={styles.link}>
+                                <Flex
+                                    direction="column"
+                                    className={styles.categoryCard}>
+                                    <SmartImage
+                                        src={category.image}
+                                        alt={category.title}
+                                        aspectRatio="16/9"
+                                        className={styles.image}
+                                    />
+                                    <Heading
+                                        variant="display-strong-xs"
+                                        className={styles.title}>
+                                        {category.title}
+                                    </Heading>
+                                </Flex>
+                            </SmartLink>
+                        </div>
+                    ))}
+                </Masonry>
+            </div>
         </Flex>
     );
 }
