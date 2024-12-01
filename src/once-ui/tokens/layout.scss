@@ -52,6 +52,7 @@
     --responsive-height-s:  var(--static-height-360);
     --responsive-height-xs: var(--static-height-280);
 
+    --responsive-space-xxl: var(--static-space-104);
     --responsive-space-xl: var(--static-space-80);
     --responsive-space-l:  var(--static-space-40);
     --responsive-space-m:  var(--static-space-24);
@@ -73,6 +74,7 @@
         --responsive-height-s:  var(--static-height-280);
         --responsive-height-xs: var(--static-height-240);
 
+        --responsive-space-xxl: var(--static-space-80);
         --responsive-space-xl: var(--static-space-64);
         --responsive-space-l:  var(--static-space-24);
         --responsive-space-m:  var(--static-space-16);
@@ -95,10 +97,11 @@
         --responsive-height-s:  var(--static-height-220);
         --responsive-height-xs: var(--static-height-160);
 
+        --responsive-space-xxl: var(--static-space-64);
         --responsive-space-xl: var(--static-space-40);
         --responsive-space-l:  var(--static-space-16);
         --responsive-space-m:  var(--static-space-12);
         --responsive-space-s:  var(--static-space-8);
-        --responsive-space-xs: var(--static-space-4);
+        --responsive-space-xs: var(--static-space-8);
     }
 }

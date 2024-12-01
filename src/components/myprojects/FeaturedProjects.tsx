@@ -83,6 +83,7 @@ export function FeaturedProjects({ locale }: FeaturedProjectsProps) {
             fillWidth
             direction="column"
             gap="l"
+            marginBottom="xl"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
             onTouchStart={() => setIsPaused(true)}

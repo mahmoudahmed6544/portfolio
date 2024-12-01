@@ -24,15 +24,13 @@
 
 .container {
     gap: var(--responsive-space-xl);
-    margin-top: var(--static-space-160);
-    margin-bottom: var(--static-space-160);
     width: 100%;
 }
 
 .heading {
-    padding: 0 var(--responsive-space-m);
+    padding: 0 var(--responsive-space-s);
     text-align: center;
-    margin-bottom: var(--responsive-space-xl);
+    margin-bottom: var(--responsive-space-s);
 }
 
 .title {
@@ -85,7 +83,6 @@
 
     .container {
         margin-top: var(--static-space-80);
-        margin-bottom: var(--static-space-80);
     }
 
     .link {

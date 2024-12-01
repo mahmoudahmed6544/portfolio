@@ -47,13 +47,13 @@ const breakpointColumns = {
 // Custom styles for masonry-grid
 const masonryStyles = {
     display: 'flex',
-    marginLeft: '-40px', /* Compensate for gutter size */
+    marginLeft: '-60px', /* Compensate for gutter size */
     width: 'auto'
 };
 
 // Custom styles for masonry-grid_column
 const columnStyles = {
-    paddingLeft: '40px', /* Gutter size */
+    paddingLeft: '60px', /* Gutter size */
     backgroundClip: 'padding-box'
 };
 
@@ -75,7 +75,7 @@ export function CategoryGrid() {
                     columnClassName={styles.masonryColumn}
                     style={masonryStyles}>
                     {categories.map((category) => (
-                        <div key={category.id} style={{ marginBottom: '80px' }}>
+                        <div key={category.id} style={{ marginBottom: '60px' }}>
                             <SmartLink
                                 href={category.href}
                                 className={styles.link}>
